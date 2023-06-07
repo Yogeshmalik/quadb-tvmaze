@@ -64,7 +64,7 @@ const TicketBookingForm = ({ show }) => {
           <button
             className=" bg-blue-500 text-white font-semibold py-3 mt-2 text-sm min-w-[80px] 
           sm:min-w-[120px] md:min-w-[130px] lg:min-w-[150px] xl:min-w-[150px] 
-          rounded-xl sm:text-lg md:text-lg lg:text-xl hover:bg-blue-600 active:scale-90"
+          rounded-xl sm:text-lg md:text-lg lg:text-xl hover:bg-blue-600 active:scale-90 hover:max-w-screen"
             type="submit"
           >
             Book

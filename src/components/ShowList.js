@@ -70,7 +70,7 @@ const ShowList = ({ show, onShowClick }) => {
                 className=" mr-2 bg-blue-500 text-white font-semibold py-4 
                 text-sm min-w-[80px] sm:min-w-[120px] md:min-w-[130px] 
               lg:min-w-[150px] xl:min-w-[150px]  rounded-xl sm:text-lg 
-              md:text-lg lg:text-lg xl:text-lg active:scale-90"
+              md:text-lg lg:text-lg xl:text-lg hover:scale-90"
               >
                 View Details
               </button>

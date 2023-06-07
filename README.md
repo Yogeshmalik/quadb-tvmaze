@@ -32,6 +32,10 @@ Check out the live version of the application [here](https://quadb-yogeshsm.verc
 4. Start the development server: `npm start`
 5. Open your browser and visit `http://localhost:3000` to see the application running
 
+## Screenshots
+
+
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.

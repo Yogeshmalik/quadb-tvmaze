@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+}
+
+.text-expanded {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  padding-bottom: 10rem;
+}
+
+.text-list {
+}
+
+.after-expand p{
+  margin-bottom: 15rem;
+  align-items: center;
+  vertical-align: middle;
+}

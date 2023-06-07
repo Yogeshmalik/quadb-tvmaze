@@ -8,7 +8,7 @@ import TicketBookingForm from "./components/TicketBookingForm";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Routes>
           <Route path="/" element={<ShowList />} />
           <Route path="/show/:showId" element={<ShowDetails />} />

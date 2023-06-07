@@ -24,7 +24,7 @@ const TicketBookingForm = ({ movieName, onClose, show }) => {
   }
 
   return (
-    <div>
+    <div className="border p-4 mt-4 rounded-3xl shadow-md hover:shadow-2xl">
       <h2>Book Ticket - {movieName}</h2>
       <div className="imgTicket">
         {show && show.image && <img src={show.image.medium} alt={show.name} />}

@@ -34,7 +34,11 @@ Check out the live version of the application [here](https://quadb-yogeshsm.verc
 
 ## Screenshots
 
-
+![Screenshot 2023-06-08 020835](https://github.com/Yogeshmalik/quadb-tvmaze/assets/14905121/5e29ec73-d195-4a86-9735-844bbd87cf81)
+![Screenshot 2023-06-08 020815](https://github.com/Yogeshmalik/quadb-tvmaze/assets/14905121/eb52b7e7-097f-4c89-8fbc-4126c7302f46)
+![Screenshot 2023-06-08 020928](https://github.com/Yogeshmalik/quadb-tvmaze/assets/14905121/48ec4793-280c-430d-b7d9-72a87c6c43b9)
+![Screenshot 2023-06-08 021029](https://github.com/Yogeshmalik/quadb-tvmaze/assets/14905121/989ea6e5-b08b-47cc-a1c0-ffe972e2a9e1)
+![Screenshot 2023-06-08 021042](https://github.com/Yogeshmalik/quadb-tvmaze/assets/14905121/38a5279a-1683-4e0b-857d-d6a8ca0cad3f)
 
 ## Contributing
 

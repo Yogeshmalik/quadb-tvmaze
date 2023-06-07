@@ -26,23 +26,15 @@ const ShowList = ({ show, onShowClick }) => {
       <ul className="list-group">
         {shows.map((show) => (
           <li
-            key={show.id}
-            className="list-group-item d-flex justify-content-between align-items-center"
+            key={show.show.id}
+            className="list-group-item d-flex justify-content-between align-items-center "
           >
             <h3>{show.show.name}</h3>
+            <img src={show.show.image.medium} alt={show.show.name} />
             <p>{show.show.summary}</p>
             <Link to={`/show/${show.show.id}`}>
               <button className="btn btn-primary">View Details</button>
             </Link>
-
-            <span>{show.name}</span>
-            <button
-              className="btn btn-primary"
-              onClick={() => onShowClick(show.id)}
-            >
-              View Details Now
-            </button>
-
           </li>
         ))}
       </ul>

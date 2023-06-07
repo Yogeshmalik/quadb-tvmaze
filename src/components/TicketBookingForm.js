@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import ConfirmationScreen from "./ConfirmationScreen";
 
-const TicketBookingForm = ({ movieName, onClose }) => {
+const TicketBookingForm = ({ movieName, onClose, show }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const [isTicketBooked, setIsTicketBooked] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,11 +16,18 @@ const TicketBookingForm = ({ movieName, onClose }) => {
 
     // Close the booking form
     onClose();
+    setIsTicketBooked(true);
   };
+
+  if (isTicketBooked) {
+    return <ConfirmationScreen movieName={movieName} />;
+  }
 
   return (
     <div>
       <h2>Book Ticket - {movieName}</h2>
+      {show && show.image && <img src={show.image.medium} alt={show.name} />}
+
       <form onSubmit={handleSubmit}>
         <label>
           Name:

@@ -35,8 +35,9 @@ const ShowDetails = () => {
     <div>
       <h1>Show Details</h1>
       <h3>{show.name}</h3>
+      {show.image && <img src={show.image.medium} alt={show.name} />}
       <p>{show.summary}</p>
-      <Link to={`/booking/${show.name}`}>
+      <Link to={`/booking/${encodeURIComponent(show.name)}`}>
         <button>Book Ticket</button>
       </Link>
       <button onClick={openBookingForm}>Book Ticket</button>

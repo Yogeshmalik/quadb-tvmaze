@@ -15,8 +15,8 @@ const TicketBookingForm = ({ movieName, onClose, show }) => {
     localStorage.setItem("userEmail", email);
 
     // Close the booking form
-    onClose();
     setIsTicketBooked(true);
+    onClose();
   };
 
   if (isTicketBooked) {
@@ -26,8 +26,9 @@ const TicketBookingForm = ({ movieName, onClose, show }) => {
   return (
     <div>
       <h2>Book Ticket - {movieName}</h2>
-      {show && show.image && <img src={show.image.medium} alt={show.name} />}
-
+      <div className="imgTicket">
+        {show && show.image && <img src={show.image.medium} alt={show.name} />}
+      </div>
       <form onSubmit={handleSubmit}>
         <label>
           Name:

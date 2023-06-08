@@ -7,15 +7,15 @@ import TicketBookingForm from "./components/TicketBookingForm";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App ">
+      <Router>
         <Routes>
           <Route path="/" element={<ShowList />} />
           <Route path="/show/:showId" element={<ShowDetails />} />
           <Route path="/booking/:movieName" element={<TicketBookingForm />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

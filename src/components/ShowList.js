@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const ShowList = ({ show, onShowClick }) => {
+const ShowList = () => {
   const [shows, setShows] = useState([]);
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -27,30 +27,28 @@ const ShowList = ({ show, onShowClick }) => {
   }, []);
 
   return (
-    <div className="max-w-screen sm:p-3 md:p-3 lg:p-3 xl:p-3 ">
-      <div className="flex pl-8">
-        <h1>Show List</h1>
-      </div>
+    <div className=" border-none outline-none px-2 mx-3.5 w-auto min-w-[30rem]">
+      <h1 className="flex p-2">TV Shows</h1>
       <ul
-        className="shadow-md max-w-[40rem] sm:max-w-full md:max-w-full 
-     lg:max-w-full xl:max-w-full min-w-screen "
+        className="shadow-md sm:max-w-full md:max-w-full 
+     lg:max-w-full xl:max-w-full min-w-screen px-1"
       >
         {shows.map((show) => (
           <li
             key={show.show.id}
-            className={`min-w-screen relative list-group-item d-flex justify-content-between align-items-center 
+            className={`min-w-[30rem] relative  d-flex 
             my-5 py-4 rounded-xl shadow-md hover:bg-blue-300 hover:scale-105 hover:shadow-2xl ${
               isExpanded ? "after-expand" : "text-list"
             }`}
           >
             <div className="flex p-2">
-              <h4 className="absolute top-4 mb-4 font-bold">MOVIE</h4>
-              <h3 className="min-w-[9.2rem] md:min-w-[10rem] lg:min-w-[12rem] xl:min-w-[14rem] ">
+              <h4 className="absolute top-4 mb-4 font-bold">TV SHOW</h4>
+              <h3 className="min-w-[8rem] md:min-w-[10rem] lg:min-w-[12rem] xl:min-w-[14rem] ">
                 {show.show.name}
               </h3>
             </div>
             <img
-              className=""
+              className=" h-48 w-auto pr-1"
               src={show.show.image.medium}
               alt={show.show.name}
             />
@@ -67,7 +65,7 @@ const ShowList = ({ show, onShowClick }) => {
             </div>
             <Link to={`/show/${show.show.id}`}>
               <button
-                className=" mr-2 bg-blue-500 text-white font-semibold py-4 
+                className=" mr-2 bg-blue-500 text-white sm:font-semibold py-3 px-1 
                 text-sm min-w-[80px] sm:min-w-[120px] md:min-w-[130px] 
               lg:min-w-[150px] xl:min-w-[150px]  rounded-xl sm:text-lg 
               md:text-lg lg:text-lg xl:text-lg hover:scale-90"

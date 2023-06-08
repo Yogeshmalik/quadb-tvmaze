@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  align-items: center;
 }
 .text {
   display: -webkit-box;
@@ -9,17 +10,47 @@
   overflow: hidden;
   text-overflow: ellipsis;
   align-items: center;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
 .text-expanded {
   white-space: normal;
   overflow: visible;
   text-overflow: unset;
-  padding-bottom: 10rem;
+  align-items: center;
+  /* display: block; */
+  -webkit-line-clamp: 8;
+  white-space: normal;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: initial initial;
+}
+
+.text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.text-expanded::-webkit-scrollbar-thumb {
+  background-color: #c3c4c7; /* Customize the color if needed */
+}
+
+.text-expanded::-webkit-scrollbar-track {
+  background-color: #e5e6e8; /* Customize the color if needed */
 }
 
 .after-expand p {
-  margin-bottom: 15rem;
   align-items: center;
   vertical-align: middle;
+}
+
+
+@media(max-screen:450px){
+  .App{
+    min-width: 49rem;
+  }
 }

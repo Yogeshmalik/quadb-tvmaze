@@ -22,24 +22,24 @@ const TicketBookingForm = ({ show }) => {
   };
 
   if (isTicketBooked) {
-    return <ConfirmationScreen movieName={movieName} show={show} name={name} />;
+    return <ConfirmationScreen movieName={movieName} show={show} name={name} image={image} />;
   }
 
   return (
     <div className="flex flex-col justify-center text-center h-screen pb-4">
       <div
-        className="border p-4 mx-2 flex flex-col mt-4 rounded-3xl shadow-md 
-    hover:shadow-2xl  justify-center text-center  pb-5"
+        className="border p-4 mx-3 flex flex-col mt-5 rounded-3xl shadow-md 
+    hover:shadow-2xl pb-5"
       >
         <h2 className="flex text-left mx-auto justify-center pb-4">
           Book Ticket - {movieName}
         </h2>
         <div className="imgTicket">
-          {show && show.image && <img src={image.medium} alt={show.name} />}
-          <img src={image} alt={name} />
+          {show && show.image && <img className=" h-48 w-auto" src={image} alt={show.name} />}
+          <img className=" h-48 w-auto" src={image} alt={name} />
         </div>
         <form onSubmit={handleSubmit}>
-          <label className=" text-xl text-red-400 font-semibold">
+          <label className="inline-flex text-xl text-red-400 font-semibold mt-4">
             NAME:
             <input
               className="border rounded-full p-3 mx-2 text-blue-500"
@@ -50,10 +50,10 @@ const TicketBookingForm = ({ show }) => {
               required
             />
           </label>
-          <label className=" text-xl text-red-400 font-semibold">
+          <label className="inline-flex text-xl text-red-400 font-semibold text-left px-4 mt-4">
             EMAIL:
             <input
-              className="border rounded-full p-3 mx-2 text-blue-500"
+              className="border rounded-3xl p-3 mx-2 text-blue-500"
               placeholder="Enter your email"
               type="email"
               value={email}
@@ -62,9 +62,9 @@ const TicketBookingForm = ({ show }) => {
             />
           </label>
           <button
-            className=" bg-blue-500 text-white font-semibold py-3 mt-2 text-sm min-w-[80px] 
+            className=" bg-red-400 text-white font-semibold py-3 mt-5 text-sm min-w-[80px] 
           sm:min-w-[120px] md:min-w-[130px] lg:min-w-[150px] xl:min-w-[150px] 
-          rounded-xl sm:text-lg md:text-lg lg:text-xl hover:bg-blue-600 active:scale-90 hover:max-w-screen"
+          rounded-xl sm:text-lg md:text-2xl hover:bg-red-500 active:scale-90 hover:max-w-screen"
             type="submit"
           >
             Book
